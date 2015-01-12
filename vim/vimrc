@@ -15,7 +15,7 @@ Plugin 'gmarik/Vundle.vim'
 " plugin on GitHub repo
 
 Bundle 'scrooloose/nerdtree'
-
+Plugin 'pangloss/vim-javascript'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
