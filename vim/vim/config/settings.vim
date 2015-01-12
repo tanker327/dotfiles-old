@@ -1,6 +1,6 @@
 " Fonts
 set gfn=Source\ Code\ Pro\ Semibold:h13
-color solarized
+"color solarized
 syntax on
 
 set shellpipe=>

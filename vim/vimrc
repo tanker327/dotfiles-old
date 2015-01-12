@@ -53,3 +53,10 @@ nnoremap <C-j> <C-w><C-j>
 nnoremap tl :tabnext<CR>
 nnoremap th :tabprev<CR>
 nnoremap tn :tabnew<CR>
+
+
+"===========================
+"Plugin config
+"===========================
+source $HOME/.vim/config/plugins.vim
+
