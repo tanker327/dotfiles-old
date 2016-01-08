@@ -1,5 +1,6 @@
 [core]
 	excludesfile = /Users/ericwu/.gitignore_global
+	editor = /usr/bin/vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -16,10 +17,18 @@
 [alias]
 	st = status
 	co = checkout
-	cm = "commit -m "
+	cm = commit 
 	br = branch
-	unstage = 'reset HEAD'
-	last = 'log -1'
+	una = "reset HEAD"
+	unadd = "rest HEAD"
+	uncm = "reset --soft HEAD^"
+	uncommit = "reset --soft HEAD^"
+	last = "log -1"
 	lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 	ad = add
 	a  = add
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
