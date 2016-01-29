@@ -83,13 +83,30 @@ source $ZSH/oh-my-zsh.sh
 #aliases
 alias mkdir='mkdir -pv'
 alias reload='source ~/.zshrc'
+alias count='find . -name "*" | xargs wc -l'
+alias tracker='cp /Users/ericwu/Development/Yieldmo-Porjects/tld/tracker/target/scala-2.9.2/tracker_2.9.2-prebuild.war /var/lib/tomcat/libexec/webapps/tracker.war'
+
 #hash
 setopt autocd
 hash -d dev=$HOME/Development
 hash -d yieldmo=$HOME/Development/Yieldmo-Porjects
+hash -d tld=$HOME/Development/Yieldmo-Porjects/tld
+hash -d admin=$HOME/Development/Yieldmo-Porjects/admin-frontend
 hash -d temp=$HOME/Development/temp 
+hash -d my=$HOME/Development/my-project 
+hash -d tom=/var/lib/tomcat/libexec
+hash -d tomcat=/var/lib/tomcat/libexec
 
 
 
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+export PATH="$PATH:$HOME/Development/my-project/git-command/"
+
+#visual studio code
+function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*; }
 
